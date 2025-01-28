@@ -1,7 +1,40 @@
 from ursina import *
 from ursina import texture_importer
-from random import choice, randint 
 from ursina.prefabs.first_person_controller import FirstPersonController
+
+
+from dataclasses import dataclass, field
+from random import choice, randint 
+from typing import List, Dict, Tuple, Optional, Union, Any
+from log_utils import ScriptLogger
+
+
+@dataclass
+class Config:
+    """Configuration for the game"""
+    logger: object = ScriptLogger()
+
+class Enviroment:
+    """ Handles terrain, roads, and building placement."""
+    def __init__(self, config: Config):
+        ...
+    
+
+class RoadLifeGame:
+    """ Main game class. """
+    def __init__(self):
+        ...
+
+
+
+
+if __name__ == "__main__":
+    road_life = RoadLifeGame()
+    road_life.run()
+
+
+
+
 
 app = Ursina()
 window.fullscreen = True
